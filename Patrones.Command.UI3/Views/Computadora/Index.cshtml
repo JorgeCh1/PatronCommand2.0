@@ -1,0 +1,82 @@
+﻿<!-- EL LAYOUT NULL ESTABLECE QUE EL INDEX NO UTILIZARA UN DISEÑO GLOBLA. ESTO SIGNIFICA QUE NO HEREDARÁ NINGÚN
+    ESTILO O ESTRUCTURA COMÚN PROPORCIONADA POR UN ARCHIVO DE DISEÑO-->
+<!-- EL ViewBag.Title = "Ejemplo de patrón Prototype asigna un valor a la propiedad title del objeto viewbag. -->
+@{
+    Layout = null;
+    ViewBag.Title = "Ejemplo de patrón Prototype";
+    var computadoras = ViewBag.Computadoras as List<Patrones.Command.UI3.Models.Computadora>;
+}
+<!-- EL var computadoras = ViewBag.Computadoras as List<Prototype_system.Models.Computadora>
+    funciona para obtener una lista de computadoras del objeto viewbag y la asigna a la variable computadoras.
+    el controlador asigna previamente esta lista al objeto viewbag, todo esto para mostrar las pc agg y clonadas-->
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+    <h2>Ejemplo de patrón Prototype</h2>
+    <!-- Html.BeginForm() Este método se utiliza para comenzar a generar un formulario HTML.
+        Al colocar este método dentro de una declaración using, garantizamos que se cerrará automáticamente el bloque <form> al finalizar el bloque using.-->
+    <!-- Agregar computadora representa el nombre de la accion del controlador que manejara la solicitud cuando se envie el formulario
+         computadora es el nombre del controlador que contiene la accion al que se envia el formulario
+         formmethod.post representa el metodo http que envia el formulario-->
+    <!-- new class objeto anónimo que contiene atributos HTML adicionales para el elemento form -->
+
+
+    @using (Html.BeginForm("AgregarComputadora", "Computadora", FormMethod.Post, new { @class = "form-horizontal" }))
+    {
+        <div class="form-group">
+            <label for="marca">Marca:</label>
+            <input type="text" class="form-control" id="marca" name="marca" required>
+        </div>
+        <div class="form-group">
+            <label for="modelo">Modelo:</label>
+            <input type="text" class="form-control" id="modelo" name="modelo" required>
+        </div>
+        <div class="form-group">
+            <label for="memoriaRAM">Memoria RAM (GB):</label>
+            <input type="number" class="form-control" id="memoriaRAM" name="memoriaRAM" required>
+        </div>
+        <div class="form-group">
+            <label for="almacenamiento">Almacenamiento (GB):</label>
+            <input type="number" class="form-control" id="almacenamiento" name="almacenamiento" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Agregar Computadora</button>
+    }
+
+    <h2>Computadoras</h2>
+    <table class="table table-bordered">
+        <tr>
+            <th>ID</th>
+            <th>Marca</th>
+            <th>Modelo</th>
+            <th>Memoria RAM (GB)</th>
+            <th>Almacenamiento (GB)</th>
+            <th>Acciones</th>
+        </tr>
+        @for (int i = 0; i < computadoras.Count; i++)
+        {
+            <tr>
+                <td>@i</td>
+                <td>@computadoras[i].Marca</td>
+                <td>@computadoras[i].Modelo</td>
+                <td>@computadoras[i].MemoriaRAM</td>
+                <td>@computadoras[i].Almacenamiento</td>
+                <td>
+                    <!--action link genera un enlace html que dirige al usuario a un accion especifica
+                        clonar es el primer parametro del metodo action link y representa el texto que se mostrara en el enlace
+                        clonar computadora es el segundo parametro del metodo action link y representa el nombre la accion del controlador
+                        new id = i es un objeto anonimo que contiene los valores de ruta para la accion que se dirigira el enlace
+                        new clas es un objeto anonimo que contiene atributos html para el elemento a-->
+
+                    @Html.ActionLink("Clonar", "ClonarComputadora", new { id = i }, new { @class = "btn btn-primary" })
+                </td>
+            </tr>
+        }
+    </table>
+</body>
+</html>
