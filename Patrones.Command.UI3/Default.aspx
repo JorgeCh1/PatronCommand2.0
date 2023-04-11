@@ -13,22 +13,22 @@
         <br />
         <div style="text-align: center">
             <asp:Label runat="server" Text="Ingrese la cantidad de Computadoras para dar de Alta:" Font-Size="Medium"></asp:Label><br />
-            <asp:TextBox ID="txtAltayBaja" runat="server" ToolTip="Representa la cantidad del producto"></asp:TextBox>
+            <asp:TextBox ID="txtAlta" runat="server" ToolTip="Representa la cantidad del producto"></asp:TextBox>
 
         </div>
         <br />
-        <!--
+        
         <div style="text-align: center">
             <asp:Label runat="server" Text="Ingrese la cantidad de Computadoras para dar de Baja:" Font-Size="Medium"></asp:Label><br />
-            <asp:TextBox ID="TextBox1" runat="server" ToolTip="Representa la cantidad del producto"></asp:TextBox>
+            <asp:TextBox ID="txtBaja" runat="server" ToolTip="Representa la cantidad del producto"></asp:TextBox>
 
         </div>
         <br />
-            -->
+            
 
         <div style="text-align: center">
-            <asp:Button runat="server" Text="Alta" OnClick="AltaStock_Click" Width="150px" />&nbsp;&nbsp;&nbsp;
-            <asp:Button runat="server" Text="Baja" OnClick="BajaStock_Click" Width="150px" />
+            <asp:Button runat="server" Text="Hecho" OnClick="Hecho_Click" Width="150px" />&nbsp;&nbsp;&nbsp;
+            <!--<asp:Button runat="server" Text="Baja" OnClick="BajaStock_Click" Width="150px" />-->
         </div>
         <br />
         <br />
