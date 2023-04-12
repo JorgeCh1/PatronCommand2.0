@@ -2,7 +2,6 @@
     ESTILO O ESTRUCTURA COMÚN PROPORCIONADA POR UN ARCHIVO DE DISEÑO-->
 <!-- EL ViewBag.Title = "Ejemplo de patrón Prototype asigna un valor a la propiedad title del objeto viewbag. -->
 @{
-    Layout = null;
     ViewBag.Title = "Ejemplo de patrón Prototype";
     var computadoras = ViewBag.Computadoras as List<Patrones.Command.UI3.Models.Computadora>;
 }
@@ -16,6 +15,11 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title></title>
+    <style>
+        body {
+            background-color: #f0f0f0;
+        }
+    </style>
 </head>
 <body>
     <h2>Ejemplo de patrón Prototype</h2>

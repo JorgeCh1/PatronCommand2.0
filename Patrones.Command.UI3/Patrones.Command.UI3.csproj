@@ -261,6 +261,10 @@
       <Project>{25266dfc-d387-4826-b125-69ff478aa098}</Project>
       <Name>Patrones.Command.Core</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Patrones.Prototype\Patrones.Prototype.csproj">
+      <Project>{640c0f50-cee4-4f07-808b-9232ab7d365c}</Project>
+      <Name>Patrones.Prototype</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
