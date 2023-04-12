@@ -8,6 +8,7 @@ namespace Patrones.Prototype
 {
     public class Computer : ICloneable
     {
+        //public int Id { get; set; }
         public string Modelo { get; set; }
         public string Procesador { get; set; }
         public int Memory { get; set; }
@@ -16,7 +17,8 @@ namespace Patrones.Prototype
 
         public Computer(string modelo, string procesador, int memory, int almacenamiento)
         {
-            Modelo = modelo;
+            //Id = id;
+            Modelo = Modelo;
             Procesador = procesador;
             Memory = memory;
             Almacenamiento = almacenamiento;

@@ -58,13 +58,13 @@ namespace Patrones.Command.UI3 {
         protected global::System.Web.UI.WebControls.GridView gridComputers;
         
         /// <summary>
-        /// txtModelos control.
+        /// txtModelo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtModelos;
+        protected global::System.Web.UI.WebControls.TextBox txtModelo;
         
         /// <summary>
         /// txtProcesadors control.

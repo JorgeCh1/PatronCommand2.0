@@ -38,20 +38,20 @@
         <h1 runat="server">Add Computer</h1>
         <table runat="server">
             <tr runat="server">
-                <td runat="server">Modelo:</td>
-                <td><asp:TextBox ID="txtModelos" runat="server"></asp:TextBox></td>
+                <td>Modelo:</td>
+                <td><asp:TextBox ID="txtModelo" runat="server" Width="450px"></asp:TextBox></td>
             </tr>
             <tr>
                 <td>Procesador:</td>
-                <td><asp:TextBox ID="txtProcesadors" runat="server"></asp:TextBox></td>
+                <td><asp:TextBox ID="txtProcesadors" runat="server" Width="450px"></asp:TextBox></td>
             </tr>
             <tr>
                 <td>Memoria:</td>
-                <td><asp:TextBox ID="txtMemoria" runat="server"></asp:TextBox></td>
+                <td><asp:TextBox ID="txtMemoria" runat="server" Width="450px"></asp:TextBox></td>
             </tr>
             <tr>
                 <td>Almacenamiento:</td>
-                <td><asp:TextBox ID="txtAlmacenamiento" runat="server"></asp:TextBox></td>
+                <td><asp:TextBox ID="txtAlmacenamiento" runat="server" Width="450px"></asp:TextBox></td>
             </tr>
             <tr>
                 <td></td>

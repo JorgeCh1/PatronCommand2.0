@@ -24,17 +24,18 @@ namespace Patrones.Command.UI3
 
             protected void AddButton_Click(object sender, EventArgs e)
             {
-                string modelo = txtModelos.Text;
+                string modelo = txtModelo.Text;
                 string procesador = txtProcesadors.Text;
                 int memory = int.Parse(txtMemoria.Text);
                 int almacenamiento = int.Parse(txtAlmacenamiento.Text);
 
-            Computer computer = new Computer(modelo, procesador, memory, almacenamiento);
+                Computer computer = new Computer(modelo, procesador, memory, almacenamiento);
 
-                int nextIndex = computers.Count;
-                computers.Add(nextIndex, computer);
+            int nextIndex = computers.Count;
+            computers.Add(nextIndex, computer);
+            BindComputers();
 
-                BindComputers();
+  
             }
 
         protected void CloneButton_Command(object sender, CommandEventArgs e)
@@ -53,7 +54,7 @@ namespace Patrones.Command.UI3
             }
             else
             {
-                lblMensaje.Text = "Total";
+                lblMensaje.Text = "Mensaje pa ver el error";
             }
         }
 
